@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartHome Platform - The Future of Smart Living</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    animation: {
+                        'fade-in-stagger': 'fadeInStagger 0.8s ease-out forwards',
+                        'bounce-subtle': 'bounceSubtle 2s infinite',
+                        'morph': 'morph 3s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        fadeInStagger: {
+                            '0%': { opacity: '0', transform: 'translateY(30px) scale(0.9)' },
+                            '100%': { opacity: '1', transform: 'translateY(0) scale(1)' },
+                        },
+                        bounceSubtle: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-5px)' },
+                        },
+                        morph: {
+                            '0%, 100%': { borderRadius: '50%' },
+                            '50%': { borderRadius: '0%' },
+                        },
+                    },
+                    colors: {
+                        cyber: '#00ff88',
+                        glass: 'rgba(255, 255, 255, 0.1)',
+                    },
+                },
+            },
+        };
+    </script>
+</head>
+<body class="bg-gray-900 text-white">
+    <!-- Advanced Navigation Bar -->
+    <nav class="bg-gray-800/95 backdrop-blur-md border-b border-gray-700 sticky top-0 z-50 shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <!-- Logo and Brand -->
+                <div class="flex items-center">
+                    <div class="flex-shrink-0 flex items-center space-x-2">
+                        <div class="w-8 h-8 bg-cyber rounded-lg flex items-center justify-center">
+                            <svg class="w-5 h-5 text-black" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.84L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.84l-7-3zM3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762zM9.3 16.573A9.026 9.026 0 007 14.935v-3.957l1.818.78a3 3 0 002.364 0l5.508-2.361a11.026 11.026 0 01.25 3.762 1 1 0 01-.89.89 8.968 8.968 0 00-5.35 2.524 1 1 0 01-1.4 0zM6 18a1 1 0 001-1v-2.065a8.935 8.935 0 00-2-.712V17a1 1 0 001 1z"/>
+                            </svg>
+                        </div>
+                        <h1 class="text-2xl font-bold text-cyber">SmartHome</h1>
+                    </div>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center space-x-1">
+                    <a href="#home" class="nav-link text-gray-300 hover:text-cyber px-3 py-2 rounded-md text-sm font-medium transition duration-300 relative group">
+                        <span>Home</span>
+                        <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-cyber transition-all duration-300 group-hover:w-full"></span>
+                    </a>
+                    <a href="#devices" class="nav-link text-gray-300 hover:text-cyber px-3 py-2 rounded-md text-sm font-medium transition duration-300 relative group">
+                        <span>Devices</span>
+                        <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-cyber transition-all duration-300 group-hover:w-full"></span>
+                    </a>
+                    <a href="#automation" class="nav-link text-gray-300 hover:text-cyber px-3 py-2 rounded-md text-sm font-medium transition duration-300 relative group">
+                        <span>Automation</span>
+                        <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-cyber transition-all duration-300 group-hover:w-full"></span>
+                    </a>
+                    <a href="#analytics" class="nav-link text-gray-300 hover:text-cyber px-3 py-2 rounded-md text-sm font-medium transition duration-300 relative group">
+                        <span>Analytics</span>
+                        <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-cyber transition-all duration-300 group-hover:w-full"></span>
+                    </a>
+                    <a href="#settings" class="nav-link text-gray-300 hover:text-cyber px-3 py-2 rounded-md text-sm font-medium transition duration-300 relative group">
+                        <span>Settings</span>
+                        <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-cyber transition-all duration-300 group-hover:w-full"></span>
+                    </a>
+                </div>
+
+                <!-- Right Side Actions -->
+                <div class="flex items-center space-x-3">
+                    <!-- Status Indicator -->
+                    <div class="hidden lg:flex items-center space-x-2">
+                        <div class="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
+                        <span class="text-xs text-gray-400">System Online</span>
+                    </div>
+
+                    <!-- Notification Bell -->
+                    <button class="text-gray-400 hover:text-cyber transition duration-300 relative">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-5 5v-5zM15 7v5h5l-5 5v-5z"/>
+                        </svg>
+                        <span class="absolute -top-1 -right-1 w-2 h-2 bg-cyber rounded-full"></span>
+                    </button>
+
+                    <!-- Connect Button -->
+                    <button class="bg-cyber text-black px-4 py-2 rounded-lg text-sm font-medium hover:bg-opacity-80 transition duration-300 shadow-lg hover:shadow-cyber/25">
+                        <span class="hidden sm:inline">Connect Device</span>
+                        <span class="sm:hidden">Connect</span>
+                    </button>
+
+                    <!-- Mobile Menu Button -->
+                    <button id="mobile-menu-button" class="md:hidden text-gray-400 hover:text-cyber transition duration-300">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="md:hidden hidden bg-gray-800/95 backdrop-blur-md border-t border-gray-700 mt-2 rounded-lg overflow-hidden">
+                <div class="px-2 pt-2 pb-3 space-y-1">
+                    <a href="#home" class="mobile-nav-link block text-gray-300 hover:text-cyber px-3 py-2 rounded-md text-base font-medium transition duration-300">Home</a>
+                    <a href="#devices" class="mobile-nav-link block text-gray-300 hover:text-cyber px-3 py-2 rounded-md text-base font-medium transition duration-300">Devices</a>
+                    <a href="#automation" class="mobile-nav-link block text-gray-300 hover:text-cyber px-3 py-2 rounded-md text-base font-medium transition duration-300">Automation</a>
+                    <a href="#analytics" class="mobile-nav-link block text-gray-300 hover:text-cyber px-3 py-2 rounded-md text-base font-medium transition duration-300">Analytics</a>
+                    <a href="#settings" class="mobile-nav-link block text-gray-300 hover:text-cyber px-3 py-2 rounded-md text-base font-medium transition duration-300">Settings</a>
+                </div>
+                <div class="px-2 pt-2 pb-3 border-t border-gray-700">
+                    <div class="flex items-center space-x-2 px-3 py-2">
+                        <div class="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
+                        <span class="text-xs text-gray-400">System Online</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <script src="script.js"></script>
+<body class="bg-gray-900 text-white">
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-800 to-black">
+        <div class="text-center animate-fade-in-stagger">
+            <h1 class="text-6xl font-bold mb-4 text-cyber">SmartHome Platform</h1>
+            <p class="text-xl mb-8 text-gray-300">The Future of Smart Living</p>
+            <button class="bg-cyber text-black px-8 py-4 rounded-full font-semibold hover:bg-opacity-80 transition duration-300 animate-bounce-subtle">Get Started</button>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-20 px-10">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-4xl font-bold text-center mb-12 text-cyber">Key Features</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-glass backdrop-blur-md p-6 rounded-lg border border-gray-700 hover:border-cyber transition duration-300">
+                    <h3 class="text-2xl font-semibold mb-4">Automation</h3>
+                    <p class="text-gray-300">Seamlessly control your home devices with intelligent automation.</p>
+                </div>
+                <div class="bg-glass backdrop-blur-md p-6 rounded-lg border border-gray-700 hover:border-cyber transition duration-300">
+                    <h3 class="text-2xl font-semibold mb-4">Security</h3>
+                    <p class="text-gray-300">Advanced security systems to keep your home safe and monitored.</p>
+                </div>
+                <div class="bg-glass backdrop-blur-md p-6 rounded-lg border border-gray-700 hover:border-cyber transition duration-300">
+                    <h3 class="text-2xl font-semibold mb-4">Energy Efficiency</h3>
+                    <p class="text-gray-300">Optimize energy usage and reduce costs with smart monitoring.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Devices Section -->
+    <section id="devices" class="py-20 px-10 bg-gray-800">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-4xl font-bold text-center mb-12 text-cyber">Your Smart Devices</h2>
+            <div id="devices-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Devices will be loaded here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-10 text-center bg-gray-800">
+        <p class="text-gray-400">&copy; 2023 SmartHome Platform. All rights reserved.</p>
+    </footer>
+</body>
+</html>
